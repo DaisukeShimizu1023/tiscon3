@@ -10,11 +10,11 @@ public class CardOrderForm extends FormBase {
     private static final long serialVersionUID = 1L;
 
     @NotBlank
-    @Size(max = 60, message = "お名前を正しく入力してください")
+    @Size(max = 60, message = "お名前（漢字）を正しく入力してください")
     private String kanjiName;
 
     @NotBlank
-    @Size(max = 90)
+    @Size(max = 90,message="お名前（カナ）を正しく入力してください")
     @Pattern(regexp = "^[ァ-ヶー 　]*$")
     private String kanaName;
 
