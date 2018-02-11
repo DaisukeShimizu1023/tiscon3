@@ -71,20 +71,37 @@
                             </div>
                             <div class="field" th:classappend="${form.hasErrors('capital')} ? 'error'">
                                 <label>資本金</label>
-                                <input type="radio" name="capital" th:field="*{form.capital}" value="999" th:checked="${form.capital}=='999'"/>１千万円未満
+                                <!--input type="radio" name="capital" th:field="*{form.capital}" value="999" th:checked="${form.capital}=='999'"/>１千万円未満
                                 <input type="radio" name="capital" th:field="${form.capital}" value="4999" th:checked="${form.capital}=='4999'"/>１千万円以上５千万円未満
                                 <input type="radio" name="capital" th:field="${form.capital}" value="29999" th:checked="${form.capital}=='29999'"/>５千万円以上３億円未満
                                 <input type="radio" name="capital" th:field="${form.capital}" value="30000" th:checked="${form.capital}=='30000'"/>３億円以上
-                                <input type="radio" name="capital" th:field="${form.capital}" value="0" th:checked="${form.capital}=='0'"/>その他
+                                <input type="radio" name="capital" th:field="${form.capital}" value="0" th:checked="${form.capital}=='0'"/>その他<-->
+                                <select name="資本金">
+                                    <option value="999">１千万円未満 </option>
+                                    <option value="4999 ">１千万円以上５千万円未満 </option>
+                                    <option value="29999 ">５千万円以上３億円未満 </option>
+                                    <option value="30000">３億円以上</option>
+                                    <option value="0">その他</option>
+                                </select>
                             </div>
                             <div class="field" th:classappend="${form.hasErrors('companySize')} ? 'error'">
                                 <label>お勤め先の規模（従業員数）</label>
-                                <input type="radio" name="companySize" th:field="${form.companySize}" value="9" th:checked="${form.companySize}=='9'"/>１０名未満
+                                <select name="お勤め先の規模（従業員数）">
+                                    <option value="9">１０名未満 </option>
+                                    <option value="29">１０名以上３０名未満 </option>
+                                    <option value="49">３０名以上５０名未満 </option>
+                                    <option value="99">５０名以上１００名未満</option>
+                                    <option value="499">１００名以上５００名未満</option>
+                                    <option value="500">５００名以上</option>
+                                </select>
+
+
+                                <!--input type="radio" name="companySize" th:field="${form.companySize}" value="9" th:checked="${form.companySize}=='9'"/>１０名未満
                                 <input type="radio" name="companySize" th:field="${form.companySize}" value="29" th:checked="${form.companySize}=='29'"/>１０名以上３０名未満
                                 <input type="radio" name="companySize" th:field="${form.companySize}" value="49" th:checked="${form.companySize}=='49'"/>３０名以上５０名未満
                                 <input type="radio" name="companySize" th:field="${form.companySize}" value="99" th:checked="${form.companySize}=='99'"/>５０名以上１００名未満
                                 <input type="radio" name="companySize" th:field="${form.companySize}" value="499" th:checked="${form.companySize}=='499'"/>１００名以上５００名未満
-                                <input type="radio" name="companySize" th:field="${form.companySize}" value="500" th:checked="${form.companySize}=='500'"/>５００名以上
+                                <input type="radio" name="companySize" th:field="${form.companySize}" value="500" th:checked="${form.companySize}=='500'"/>５００名以上<-->
                             </div>
                             <div class="field" th:classappend="${form.hasErrors('department')} ? 'error'">
                                 <label>所属部署</label>
