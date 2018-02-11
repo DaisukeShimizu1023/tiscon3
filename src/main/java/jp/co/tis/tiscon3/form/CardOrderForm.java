@@ -18,66 +18,66 @@ public class CardOrderForm extends FormBase {
     @Pattern(regexp = "^[ァ-ヶー 　]*$",message="お名前（カナ）を正しく入力してください")
     private String kanaName;
 
-    @NotBlank
-    @Size(max = 120)
-    @Pattern(regexp = "^[a-zA-Z 　]*$")
+    @NotBlank(message="お名前（アルファベット)を正しく入力してください（半角英数字）")
+    @Size(max = 120,message="お名前（アルファベット)を正しく入力してください（半角英数字）")
+    @Pattern(regexp = "^[a-zA-Z 　]*$",message="お名前（アルファベット)を正しく入力してください（半角英数字）")
     private String alphabetName;
 
-    @NotBlank
-    @Size(max = 10)
-    @Pattern(regexp = "\\d{4}/\\d{1,2}/\\d{1,2}$")
+    @NotBlank(message="誕生日を正しく入力してください（半角英数字）")
+    @Size(max = 10,message="誕生日を正しく入力してください（半角英数字）")
+    @Pattern(regexp = "\\d{4}/\\d{1,2}/\\d{1,2}$",message="誕生日を正しく入力してください（半角英数字）")
     private String dateOfBirth;
 
-    @NotBlank
-    @Size(max = 6)
+    @NotBlank(message="性別を正しく選択してください")
+    @Size(max = 6,message="性別を正しく選択してください")
     private String gender;
 
-    @NotBlank
-    @Size(max = 8)
-    @Pattern(regexp = "^[0-9]{3}-[0-9]{4}$")
+    @NotBlank(message="郵便番号を正しく入力してください（半角英数字）")
+    @Size(max = 8,message="郵便番号を正しく入力してください（半角英数字）")
+    @Pattern(regexp = "^[0-9]{3}-[0-9]{4}$",message="郵便番号を正しく入力してください（半角英数字）")
     private String zipCode;
 
-    @NotBlank
-    @Size(max = 255)
+    @NotBlank(message="ご住所を正しく入力してください")
+    @Size(max = 255,message="ご住所を正しく入力してください")
     private String address;
 
-    @NotBlank
-    @Size(max = 13)
-    @Pattern(regexp = "^0[0-9]{1,3}-[0-9]{2,4}-[0-9]{4}$")
+    @NotBlank(message="自宅電話番号を正しく入力してください（半角英数字）")
+    @Size(max = 13,message="自宅電話番号を正しく入力してください（半角英数字）")
+    @Pattern(regexp = "^0[0-9]{1,3}-[0-9]{2,4}-[0-9]{4}$",message="自宅電話番号を正しく入力してください（半角英数字）")
     private String homePhoneNumber;
 
-    @Size(max = 13)
-    @Pattern(regexp = "^((070|080|090)-[0-9]{4}-[0-9]{4})?$")
+    @Size(max = 13,message="携帯電話番号を正しく入力してください（半角英数字）")
+    @Pattern(regexp = "^((070|080|090)-[0-9]{4}-[0-9]{4})?$",message="携帯電話番号を正しく入力してください（半角英数字）")
     private String mobilePhoneNumber;
 
-    @NotBlank
-    @Size(max = 255)
+    @NotBlank(message="メールアドレスを正しく入力してください")
+    @Size(max = 255,message="メールアドレスを正しく入力してください")
     @Email
     private String emailAddress;
 
-    @NotBlank
-    @Size(max = 20)
+    @NotBlank(message="配偶者有無を正しく選択してください")
+    @Size(max = 20,message="配偶者有無を正しく選択してください")
     private String spouse;
 
-    @NotBlank
-    @Size(max = 20)
+    @NotBlank(message="お住まいを正しく入力してください")
+    @Size(max = 20,message="お住まいを正しく入力してください")
     private String houseClassification;
 
-    @NotBlank
-    @Size(max = 6)
-    @Pattern(regexp = "[0-9]*")
+    @NotBlank(message="ローン等のお借り入れ金額を正しく入力してください")
+    @Size(max = 6,message="ローン等のお借り入れ金額を正しく入力してください")
+    @Pattern(regexp = "[0-9]*",message="ローン等のお借り入れ金額を正しく入力してください")
     private String debt;
 
-    @NotBlank
-    @Size(max = 120)
+    @NotBlank(message="ご職業を正しく入力してください")
+    @Size(max = 120,message="ご職業を正しく入力してください")
     private String job;
 
-    @NotBlank
-    @Size(max = 6)
-    @Pattern(regexp = "[0-9]*")
+    @NotBlank(message="昨年の所得を正しく入力してください")
+    @Size(max = 6,message="昨年の所得を正しく入力してください")
+    @Pattern(regexp = "[0-9]*",message="昨年の所得を正しく入力してください")
     private String income;
 
-    @Size(max = 255)
+    @Size(max = 255,message="お勤め先を正しく入力してください")
     private String employerName;
 
     @Size(max = 8)
