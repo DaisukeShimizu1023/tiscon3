@@ -29,19 +29,19 @@
                             <div class="ui statement">ご職業が「経営・自営業」、「会社員」、「契約・派遣社員」、「公務員」、「民間団体」、「その他（有職）」の方は、以下の項目をご入力ください。</div>
 
                             <div class="field" th:classappend="${form.hasErrors('employerName')} ? 'error'">
-                                <label>お勤め先名　例)株式会社　○○○○</label>
+                                <label>お勤め先名　例)株式会社　○○○○　（全角）</label>
                                 <input type="text" name="employerName" th:value="${form.employerName}"/>
                             </div>
                             <div class="field" th:classappend="${form.hasErrors('employerZipCode')} ? 'error'">
-                                <label>お勤め先郵便番号　例)000-0000(半角数字)</label>
+                                <label>お勤め先郵便番号　例)000-0000　(半角数字)</label>
                                 <input type="text" name="employerZipCode" th:value="${form.employerZipCode}"/>
                             </div>
                             <div class="field" th:classappend="${form.hasErrors('employerAddress')} ? 'error'">
-                                <label>お勤め先住所　例)000-0000(半角数字)</label>
+                                <label>お勤め先住所　例)000-0000　(半角数字)</label>
                                 <input type="text" name="employerAddress" th:value="${form.employerAddress}"/>
                             </div>
                             <div class="field" th:classappend="${form.hasErrors('employerPhoneNumber')} ? 'error'">
-                                <label>お勤め先電話番号　例)000-000-0000(半角数字)</label>
+                                <label>お勤め先電話番号　例)000-000-0000　(半角数字)</label>
                                 <input type="text" name="employerPhoneNumber" th:value="${form.employerPhoneNumber}"/>
                             </div>
                             <div class="field" th:classappend="${form.hasErrors('industryType')} ? 'error'">

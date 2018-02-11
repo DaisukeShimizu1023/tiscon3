@@ -27,11 +27,11 @@
                             <div class="ui horizontal divider">ご本人について</div>
 
                             <div class="field" th:classappend="${form.hasErrors('kanjiName')} ? 'error'">
-                                <label>お名前（漢字)　例)山田　太郎</label>
+                                <label>お名前（漢字）　例)山田　太郎</label>
                                 <input type="text" name="kanjiName" th:value="${form.kanjiName}"/>
                             </div>
                             <div class="field" th:classappend="${form.hasErrors('kanaName')} ? 'error'">
-                                <label>お名前（カナ）例)ヤマダ　タロウ</label>
+                                <label>お名前（カナ）例)ヤマダ　タロウ　(全角)</label>
                                 <input type="text" name="kanaName" th:value="${form.kanaName}"/>
                             </div>
                             <div class="field" th:classappend="${form.hasErrors('alphabetName')} ? 'error'">
@@ -44,15 +44,15 @@
                                 <input type="radio" name="gender" value="female" th:checked="${form.gender}=='female'"/>女性
                             </div>
                             <div class="field" th:classappend="${form.hasErrors('dateOfBirth')} ? 'error'">
-                                <label>生年月日　例)1971/4/1(半角数字)</label>
+                                <label>生年月日　例)1971/4/1　(半角数字)</label>
                                 <input type="text" name="dateOfBirth" th:value="${form.dateOfBirth}"/>
                             </div>
                             <div class="field" th:classappend="${form.hasErrors('zipCode')} ? 'error'">
-                                <label>郵便番号　例)160-0023(半角英数字)</label>
+                                <label>郵便番号　例)160-0023　(半角数字)</label>
                                 <input type="text" class="zipcode" name="zipCode" th:value="${form.zipCode}"/>
                             </div>
                             <div class="field" th:classappend="${form.hasErrors('address')} ? 'error'">
-                                <label>ご住所　例)東京都新宿区西新宿８丁目１７番地１号(全角)</label>
+                                <label>ご住所　例)東京都新宿区西新宿８丁目１７番地１号　(全角)</label>
                                 <input type="text" name="address" th:value="${form.address}"/>
                             </div>
                             <div class="field" th:classappend="${form.hasErrors('homePhoneNumber')} ? 'error'">
@@ -60,7 +60,7 @@
                                 <input type="text" name="homePhoneNumber" th:value="${form.homePhoneNumber}"/>
                             </div>
                             <div class="field" th:classappend="${form.hasErrors('mobilePhoneNumber')} ? 'error'">
-                                <label>携帯電話番号　例)090-1234-5678(半角英数字)</label>
+                                <label>携帯電話番号　例)090-1234-5678(半角数字)</label>
                                 <input type="text" name="mobilePhoneNumber" th:value="${form.mobilePhoneNumber}"/>
                             </div>
                             <div class="field" th:classappend="${form.hasErrors('emailAddress')} ? 'error'">
